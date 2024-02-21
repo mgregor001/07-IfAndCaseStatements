@@ -1,5 +1,17 @@
+def add(n1, n2):
+    return n1 + n2
+
+def subtract(n1, n2):
+    return n1 - n2
+
+def multiply(n1, n2):
+    return n1 * n2
+
+def divide(n1, n2):
+    return n1 / n2
+
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   In this module, we will improve upon the calculator that we built in the
 #   Session 5 coding exercises.
@@ -40,8 +52,27 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def if_calc():
+    print("Math Time!")
+    n1 = float(input("Enter First Number: "))
+    n2 = float(input("Enter Second Number: "))
+    mathsign = input("Which operator would you like to use? '+' for add, '-' for subtract, '*' for multiply, or '/' for divide: ")
+    if mathsign == "+":
+        print("Add:", add(n1, n2))
+    elif mathsign == "-":
+        print("Subtract:", subtract(n1, n2))
+    elif mathsign == "*":
+        print("Multiply:", multiply(n1, n2))
+    elif mathsign == "/":
+        print("Divide", divide(n1, n2))
+    else:
+        print("Invalid Operation!")
+    print("Thanks for Using Math Time!")
+
+if_calc()
+
 ###############################################################################
-# TODO: 2. (4 pts)
+# DONE: 2. (4 pts)
 #
 #   Now, do the same thing that you did in _TODO_ 1, but this time, use case
 #   statements in your solution instead of if statements.
@@ -51,3 +82,23 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def case_calc():
+    print("Math Time!")
+    n1 = float(input("Enter First Number: "))
+    n2 = float(input("Enter Second Number: "))
+    mathsign = input("Which operator would you like to use? '+' for add, '-' for subtract, '*' for multiply, or '/' for divide: ")
+    match mathsign:
+        case "+":
+            print("Add:", add(n1, n2))
+        case "-":
+            print("Subtract:", subtract(n1, n2))
+        case "*":
+            print("Multiply:", multiply(n1, n2))
+        case "/":
+            print("Divide", divide(n1, n2))
+        case _:
+            print("Invalid operation!")
+    print("Thanks for Using Math Time!")
+
+case_calc()

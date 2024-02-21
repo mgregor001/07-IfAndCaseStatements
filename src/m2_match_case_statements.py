@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -16,6 +16,30 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def color_picker():
+    color = input("Enter a color: ")
+    match color:
+        case "red":
+            print("Success! You picked red.")
+        case "orange":
+            print("Success! You picked orange.")
+        case "yellow":
+            print("Success! You picked yellow.")
+        case "green":
+            print("Success! You picked green.")
+        case "blue":
+            print("Success! You picked blue.")
+        case "purple":
+            print("Success! You picked purple.")
+        case "pink":
+            print("Success! You picked pink.")
+        case "grey":
+            print("Success! You picked grey.")
+        case _:
+            print("Unknown color.")
+
+color_picker()
 
 ###############################################################################
 # TODO: 2. (3 pts)
@@ -35,4 +59,20 @@
 #   Make sure you call your function to start things off.
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
-###############################################################################
+##############################################################################
+
+def grade():
+    gradevalue = float(input("Enter your grade as a decimal value between 0-1: "))
+    match gradevalue:
+        case _ if 0.9 <= gradevalue <= 1:
+            print("You received an A.")
+        case _ if 0.8 <= gradevalue <= .89:
+            print("You received a B.")
+        case _ if 0.7 <= gradevalue <= 0.79:
+            print("You received a C.")
+        case _ if 0.6 <= gradevalue <= 0.69:
+            print("You received a D.")
+        case _:
+            print("You received an F.")
+
+grade()
